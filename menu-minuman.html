@@ -1,8 +1,19 @@
+<?php
+$gallery_images = [
+    '5f61f240a56e8.jpg',
+    '5fce3837c4f6d.jpg',
+    '6160e9828a4a3.jpeg',
+    '67235eed6bcb1.jpg',
+    'download (1).jpg',
+    'download.jpg'
+];
+?>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Minuman - WARUNG KENZ</title>
+    <title>WARUNG KENZ</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -22,6 +33,7 @@
             font-size: 28px;
             font-weight: bold;
             text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             letter-spacing: 2px;
         }
         nav {
@@ -43,27 +55,19 @@
             color: #ffd9b3;
             transform: scale(1.1);
         }
-        .menu-section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            border-radius: 15px;
-        }
-        .menu-item {
+        .home-gallery {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 15px;
-            margin-bottom: 15px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 10px;
-            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 90%;
         }
-        .menu-item img {
-            width: 80px;
-            height: 80px;
+        .home-gallery img {
+            width: 200px;
+            height: auto;
             border-radius: 10px;
-            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .order-form {
             margin: 20px auto;
@@ -73,6 +77,7 @@
             max-width: 600px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         .order-button {
             display: inline-block;
@@ -85,6 +90,8 @@
             text-decoration: none;
             border-radius: 5px;
             transition: all 0.3s;
+            border: none;
+            cursor: pointer;
         }
         .order-button:hover {
             background-color: #1da851;
@@ -101,39 +108,17 @@
 </head>
 <body>
     <header>
-        <h1>Menu Minuman - WARUNG KENZ</h1>
+        <h1>WARUNG KENZ</h1>
     </header>
     <nav>
         <a href="menu-makanan.html">Makanan</a>
         <a href="menu-minuman.html">Minuman</a>
         <a href="#order">Pesan</a>
     </nav>
-    <section class="menu-section">
-        <h2>Menu Minuman</h2>
-        <div class="menu-item">
-            <img src="https://i.imgur.com/YB6KJ9G.jpg" alt="Es Teh Manis">
-            <p>Es Teh Manis - Rp. 3.000</p>
-        </div>
-        <div class="menu-item">
-            <img src="https://i.imgur.com/W6J7H3K.jpg" alt="Es Jeruk">
-            <p>Es Jeruk - Rp. 4.000</p>
-        </div>
-        <div class="menu-item">
-            <img src="https://i.imgur.com/P5J9K8L.jpg" alt="Kopi Hitam">
-            <p>Kopi Hitam - Rp. 5.000</p>
-        </div>
-        <div class="menu-item">
-            <img src="https://i.imgur.com/Z3T9J7K.jpg" alt="Es Cappuccino">
-            <p>Es Cappuccino - Rp. 6.000</p>
-        </div>
-        <div class="menu-item">
-            <img src="https://i.imgur.com/Q8L5H7J.jpg" alt="Jus Alpukat">
-            <p>Jus Alpukat - Rp. 7.000</p>
-        </div>
-        <div class="menu-item">
-            <img src="https://i.imgur.com/L8KJ5Y7.jpg" alt="Jus Mangga">
-            <p>Jus Mangga - Rp. 7.000</p>
-        </div>
+    <section class="home-gallery">
+        <?php foreach ($gallery_images as $image) { ?>
+            <img src="<?php echo $image; ?>" alt="Gallery Image">
+        <?php } ?>
     </section>
     <section class="order-form" id="order">
         <h2>Pesan Sekarang</h2>
