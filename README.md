@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://imgur.com/zl286E7') no-repeat center center fixed;
+            background: url('download.jpg') no-repeat center center fixed;
             background-size: cover;
             text-align: center;
         }
@@ -138,8 +138,8 @@
         </section>
         <section class="gallery" id="galeri">
             <h2>Galeri Makanan & Minuman</h2>
-            <img src="https://imgur.com/5auiIC0" alt="Makanan">
-            <img src="https://imgur.com/by9LlZp" alt="Minuman">
+            <img src="9d402923b048c65c2f4cbb972534bbad.jpg" alt="Makanan">
+            <img src="pngtree-fresh-drink-illustration-in-the-plastic-png-image_4546726.png" alt="Minuman">
         </section>
         <section class="order-form" id="order">
             <h2>Pesan Sekarang</h2>
