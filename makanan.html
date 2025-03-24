@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARUNG KENZ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.imgur.com/zl286E7.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(255, 69, 0, 0.9);
+            padding: 20px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
+        }
+        nav {
+            background-color: rgba(255, 87, 51, 0.9);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            border-bottom: 3px solid #ff4500;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            color: #ffd9b3;
+            transform: scale(1.1);
+        }
+        .menu-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .order-form {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            width: 90%;
+            max-width: 600px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .order-button {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background-color: #25D366;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .order-button:hover {
+            background-color: #1da851;
+            transform: scale(1.1);
+        }
+        footer {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 69, 0, 0.9);
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WARUNG KENZ</h1>
+    </header>
+    <nav>
+        <a href="menu-makanan.html">Makanan</a>
+        <a href="menu-minuman.html">Minuman</a>
+        <a href="#order">Pesan</a>
+    </nav>
+    <section class="menu-section">
+        <h2>Menu Makanan</h2>
+        <div class="menu-item">
+            <img src="https://i.imgur.com/9GqI1zW.jpg" alt="Seblak">
+            <p>Seblak - Rp. 6.000</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.imgur.com/XYZ123.jpg" alt="Bakso Aci">
+            <p>Bakso Aci - Rp. 7.000</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.imgur.com/ABC456.jpg" alt="Kwetiau Goreng">
+            <p>Kwetiau Goreng - Rp. 6.000</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.imgur.com/jQ3cT7M.jpg" alt="Burger">
+            <p>Burger - Rp. 4.000</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.imgur.com/Y7P6T5L.jpg" alt="Roti Goreng">
+            <p>Roti Goreng - Rp. 5.000</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.imgur.com/T8Q7F3N.jpg" alt="Roti Bakar">
+            <p>Roti Bakar - Rp. 5.000</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.imgur.com/Z2G1XPL.jpg" alt="Cilor dan Maklor">
+            <p>Cilor dan Maklor - Rp. 2.000</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.imgur.com/G5H7KJ2.jpg" alt="Papeda">
+            <p>Papeda - Rp. 2.000</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.imgur.com/J4R8L9M.jpg" alt="Indomie Goreng dan Kuah">
+            <p>Indomie Goreng dan Kuah - Rp. 9.000</p>
+        </div>
+    </section>
+    <section class="order-form" id="order">
+        <h2>Pesan Sekarang</h2>
+        <a href="https://wa.me/6285777821020" class="order-button">Pesan via WhatsApp</a>
+    </section>
+    <footer>
+        <p>&copy; 2025 WARUNG KENZ. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>
