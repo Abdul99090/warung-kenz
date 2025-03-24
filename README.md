@@ -30,25 +30,27 @@ $gallery_images = [
                 $("#chat-box").toggle();
             });
             
-            $("#chat-box button").click(function() {
-                alert("Fitur ini akan segera tersedia!");
+            $("#send-btn").click(function() {
+                let userMessage = $("#user-input").val();
+                if (userMessage.trim() !== "") {
+                    $("#chat-content").append("<p><strong>Anda:</strong> " + userMessage + "</p>");
+                    $("#user-input").val("");
+                    setTimeout(() => respondAI(userMessage), 1000);
+                }
             });
         });
 
-        function updateWebsiteAutomatically() {
-            $.ajax({
-                url: 'update.php',
-                type: 'GET',
-                success: function(response) {
-                    console.log("Website updated: " + response);
-                },
-                error: function() {
-                    console.log("Error updating website");
-                }
-            });
+        function respondAI(message) {
+            let response = "Maaf, saya belum mengerti pertanyaan Anda.";
+            if (message.toLowerCase().includes("menu")) {
+                response = "Silakan pilih: \n1. Menu Makanan \n2. Menu Minuman";
+            } else if (message.includes("1")) {
+                response = "Berikut menu makanan kami: Seblak, Bakso Aci, Burger, dll.";
+            } else if (message.includes("2")) {
+                response = "Berikut menu minuman kami: Es Teh, Kopi, Susu, dll.";
+            }
+            $("#chat-content").append("<p><strong>Bot:</strong> " + response + "</p>");
         }
-
-        setInterval(updateWebsiteAutomatically, 60000); // Cek update setiap 60 detik
     </script>
     <style>
         body {
@@ -112,36 +114,24 @@ $gallery_images = [
             color: white;
             font-size: 16px;
         }
-        #ai-bot {
+        #wa-button {
             position: fixed;
             bottom: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
+            left: 20px;
+            background: #25d366;
             color: white;
-            padding: 10px;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            text-align: center;
-            cursor: pointer;
-            font-size: 30px;
-            line-height: 60px;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-size: 18px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
-        #ai-bot:hover {
+        #wa-button:hover {
             transform: scale(1.1);
-        }
-        #chat-box {
-            display: none;
-            position: fixed;
-            bottom: 90px;
-            right: 20px;
-            background: white;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            color: black;
         }
     </style>
 </head>
@@ -159,8 +149,15 @@ $gallery_images = [
             <img src="images/<?php echo $image; ?>" alt="Gallery Image">
         <?php } ?>
     </div>
+    <a id="wa-button" href="https://wa.me/6281234567890" target="_blank">
+        📞 Hubungi via WhatsApp
+    </a>
     <div id="ai-bot">🤖</div>
-    <div id="chat-box">Halo! Saya AI bot, siap membantu belanja Anda! Pilih kategori: <br> <button>Menu Makanan</button> <button>Menu Minuman</button></div>
+    <div id="chat-box">
+        <div id="chat-content"></div>
+        <input type="text" id="user-input" placeholder="Ketik pertanyaan...">
+        <button id="send-btn">Kirim</button>
+    </div>
     <footer>
         <p>&copy; 2025 WARUNG KENZ. Semua Hak Dilindungi.</p>
     </footer>
