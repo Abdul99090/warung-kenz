@@ -59,47 +59,47 @@
         <h2>Menu Makanan</h2>
         <div class="menu">
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?seblak" alt="Seblak">
+                <img src="https://i.imgur.com/B5Y6FQq.jpg" alt="Seblak">
                 <p><strong>Seblak</strong></p>
                 <p>Rp. 6.000</p>
             </div>
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?bakso" alt="Bakso Aci">
+                <img src="https://i.imgur.com/s4KsU2v.jpg" alt="Bakso Aci">
                 <p><strong>Bakso Aci</strong></p>
                 <p>Rp. 7.000</p>
             </div>
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?kwetiau" alt="Kwetiau Goreng">
+                <img src="https://i.imgur.com/4RxddHK.jpg" alt="Kwetiau Goreng">
                 <p><strong>Kwetiau Goreng</strong></p>
                 <p>Rp. 6.000</p>
             </div>
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?burger" alt="Burger">
+                <img src="https://i.imgur.com/J5ptvVQ.jpg" alt="Burger">
                 <p><strong>Burger</strong></p>
                 <p>Rp. 4.000</p>
             </div>
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?bread" alt="Roti Goreng">
+                <img src="https://i.imgur.com/ThRReUt.jpg" alt="Roti Goreng">
                 <p><strong>Roti Goreng</strong></p>
                 <p>Rp. 5.000</p>
             </div>
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?toast" alt="Roti Bakar">
+                <img src="https://i.imgur.com/m7C8ok5.jpg" alt="Roti Bakar">
                 <p><strong>Roti Bakar</strong></p>
                 <p>Rp. 5.000</p>
             </div>
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?snack" alt="Cilor dan Maklor">
+                <img src="https://i.imgur.com/5zUK7jx.jpg" alt="Cilor dan Maklor">
                 <p><strong>Cilor dan Maklor</strong></p>
                 <p>Rp. 2.000</p>
             </div>
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?papeda" alt="Papeda">
+                <img src="https://i.imgur.com/0Okt7PN.jpg" alt="Papeda">
                 <p><strong>Papeda</strong></p>
                 <p>Rp. 2.000</p>
             </div>
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?indomie" alt="Indomie Goreng dan Kuah">
+                <img src="https://i.imgur.com/DR9WNN1.jpg" alt="Indomie Goreng dan Kuah">
                 <p><strong>Indomie Goreng dan Kuah</strong></p>
                 <p>Rp. 9.000</p>
             </div>
@@ -107,12 +107,12 @@
         <h2>Menu Minuman</h2>
         <div class="menu">
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?ice-drink" alt="Es Cekek">
+                <img src="https://i.imgur.com/u5TcXjA.jpg" alt="Es Cekek">
                 <p><strong>Es Cekek</strong></p>
                 <p>Rp. 2.000</p>
             </div>
             <div class="item">
-                <img src="https://source.unsplash.com/200x150/?coffee" alt="Kopi Es/Panas">
+                <img src="https://i.imgur.com/wcP5ACh.jpg" alt="Kopi Es/Panas">
                 <p><strong>Kopi Es/Panas</strong></p>
                 <p>Rp. 5.000 / Rp. 4.000</p>
             </div>
