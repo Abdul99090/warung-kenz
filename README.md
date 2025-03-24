@@ -25,6 +25,14 @@ $gallery_images = [
                 height: 400,
                 autoCenter: true
             });
+            
+            $("#ai-bot").click(function() {
+                $("#chat-box").toggle();
+            });
+            
+            $("#chat-box button").click(function() {
+                alert("Fitur ini akan segera tersedia!");
+            });
         });
     </script>
     <style>
@@ -32,8 +40,7 @@ $gallery_images = [
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://i.imgur.com/zl286E7.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
             text-align: center;
             color: #fff;
         }
@@ -64,6 +71,23 @@ $gallery_images = [
         }
         nav a:hover {
             color: #ffd9b3;
+            transform: scale(1.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
             transform: scale(1.1);
         }
         .flipbook {
@@ -102,6 +126,10 @@ $gallery_images = [
             cursor: pointer;
             font-size: 30px;
             line-height: 60px;
+            transition: transform 0.3s;
+        }
+        #ai-bot:hover {
+            transform: scale(1.1);
         }
         #chat-box {
             display: none;
@@ -122,37 +150,23 @@ $gallery_images = [
         <h1>WARUNG KENZ</h1>
     </header>
     <nav>
-        <a href="#menu">Menu</a>
+        <a href="menu-makanan.html">Menu Makanan</a>
+        <a href="menu-minuman.html">Menu Minuman</a>
         <a href="#order">Pesan</a>
     </nav>
-    <div id="flipbook" class="flipbook">
-        <div class="page">Menu Makanan</div>
-        <div class="page">Nasi Goreng</div>
-        <div class="page">Ayam Bakar</div>
-        <div class="page">Mie Goreng</div>
-        <div class="page">Menu Minuman</div>
-        <div class="page">Es Teh Manis</div>
-        <div class="page">Jus Alpukat</div>
-        <div class="page">Kopi Susu</div>
+    <div class="gallery">
+        <?php foreach ($gallery_images as $image) { ?>
+            <img src="images/<?php echo $image; ?>" alt="Gallery Image">
+        <?php } ?>
     </div>
-    <section class="order-form" id="order">
-        <h2>Pesan Sekarang</h2>
-        <a href="https://wa.me/6285777821020" class="order-button">Pesan via WhatsApp</a>
-    </section>
+    <div id="flipbook" class="flipbook">
+        <div class="page">Menu Makanan & Minuman</div>
+        <div class="page">Silakan pilih kategori!</div>
+    </div>
+    <div id="ai-bot">🤖</div>
+    <div id="chat-box">Halo! Saya AI bot, siap membantu belanja Anda! Pilih kategori: <br> <button>Menu Makanan</button> <button>Menu Minuman</button></div>
     <footer>
         <p>&copy; 2025 WARUNG KENZ. Semua Hak Dilindungi.</p>
     </footer>
-    <div id="ai-bot">🤖</div>
-    <div id="chat-box">Halo! Saya bot AI, siap membantu belanja Anda.</div>
-    <script>
-        document.getElementById("ai-bot").addEventListener("click", function() {
-            let chatBox = document.getElementById("chat-box");
-            if (chatBox.style.display === "none") {
-                chatBox.style.display = "block";
-            } else {
-                chatBox.style.display = "none";
-            }
-        });
-    </script>
 </body>
 </html>
