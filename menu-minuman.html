@@ -16,6 +16,17 @@ $gallery_images = [
     <title>WARUNG KENZ</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4/turn.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#flipbook").turn({
+                width: 600,
+                height: 400,
+                autoCenter: true
+            });
+        });
+    </script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -55,47 +66,20 @@ $gallery_images = [
             color: #ffd9b3;
             transform: scale(1.1);
         }
-        .home-gallery {
+        .flipbook {
+            margin: 50px auto;
+        }
+        .flipbook .page {
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            margin: 20px auto;
-            max-width: 90%;
-        }
-        .home-gallery img {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .order-form {
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            width: 90%;
-            max-width: 600px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        .order-button {
-            display: inline-block;
-            margin: 20px auto;
-            padding: 15px 30px;
-            background-color: #25D366;
-            color: white;
+            align-items: center;
             font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        .order-button:hover {
-            background-color: #1da851;
-            transform: scale(1.1);
+            color: black;
         }
         footer {
             margin-top: 20px;
@@ -111,15 +95,19 @@ $gallery_images = [
         <h1>WARUNG KENZ</h1>
     </header>
     <nav>
-        <a href="menu-makanan.html">Makanan</a>
-        <a href="menu-minuman.html">Minuman</a>
+        <a href="#menu">Menu</a>
         <a href="#order">Pesan</a>
     </nav>
-    <section class="home-gallery">
-        <?php foreach ($gallery_images as $image) { ?>
-            <img src="<?php echo $image; ?>" alt="Gallery Image">
-        <?php } ?>
-    </section>
+    <div id="flipbook" class="flipbook">
+        <div class="page">Menu Makanan</div>
+        <div class="page">Nasi Goreng</div>
+        <div class="page">Ayam Bakar</div>
+        <div class="page">Mie Goreng</div>
+        <div class="page">Menu Minuman</div>
+        <div class="page">Es Teh Manis</div>
+        <div class="page">Jus Alpukat</div>
+        <div class="page">Kopi Susu</div>
+    </div>
     <section class="order-form" id="order">
         <h2>Pesan Sekarang</h2>
         <a href="https://wa.me/6285777821020" class="order-button">Pesan via WhatsApp</a>
