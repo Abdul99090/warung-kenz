@@ -143,6 +143,9 @@ $gallery_images = [
             padding: 10px;
             color: black;
         }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
