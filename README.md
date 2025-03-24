@@ -10,16 +10,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffdde1);
+            background: url('https://imgur.com/zl286E7') no-repeat center center fixed;
+            background-size: cover;
             text-align: center;
-            animation: backgroundAnimation 10s infinite alternate;
-        }
-        @keyframes backgroundAnimation {
-            0% { background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffdde1); }
-            100% { background: linear-gradient(135deg, #ffdde1, #fad0c4, #ff9a9e); }
         }
         header {
-            background-color: #ff4500;
+            background-color: rgba(255, 69, 0, 0.9);
             padding: 20px;
             color: white;
             font-size: 28px;
@@ -28,7 +24,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         nav {
-            background-color: #ff5733;
+            background-color: rgba(255, 87, 51, 0.9);
             padding: 15px;
             display: flex;
             justify-content: center;
@@ -48,15 +44,11 @@
         .menu, .gallery, .order-form {
             margin: 20px auto;
             padding: 20px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9);
             width: 90%;
             max-width: 600px;
             border-radius: 15px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-        .menu:hover, .gallery:hover, .order-form:hover {
-            transform: scale(1.05);
         }
         .menu h2, .gallery h2, .order-form h2 {
             color: #ff4500;
@@ -69,12 +61,6 @@
             padding: 12px;
             font-size: 18px;
             border-bottom: 1px solid #ddd;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .menu li:hover {
-            background-color: #ff4500;
-            color: white;
-            cursor: pointer;
         }
         .gallery img {
             width: 100%;
@@ -83,7 +69,7 @@
             margin-top: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .order-button, .submit-button {
+        .order-button {
             display: inline-block;
             margin: 20px auto;
             padding: 15px 30px;
@@ -97,13 +83,13 @@
             border: none;
             cursor: pointer;
         }
-        .order-button:hover, .submit-button:hover {
+        .order-button:hover {
             background-color: #1da851;
         }
         footer {
             margin-top: 20px;
             padding: 15px;
-            background-color: #ff4500;
+            background-color: rgba(255, 69, 0, 0.9);
             color: white;
             font-size: 16px;
         }
@@ -111,7 +97,7 @@
             .menu, .gallery, .order-form {
                 width: 95%;
             }
-            .order-button, .submit-button {
+            .order-button {
                 width: 90%;
                 padding: 15px;
             }
@@ -152,8 +138,8 @@
         </section>
         <section class="gallery" id="galeri">
             <h2>Galeri Makanan & Minuman</h2>
-            <img src="https://source.unsplash.com/400x300/?food" alt="Makanan">
-            <img src="https://source.unsplash.com/400x300/?drink" alt="Minuman">
+            <img src="https://imgur.com/5auiIC0" alt="Makanan">
+            <img src="https://imgur.com/by9LlZp" alt="Minuman">
         </section>
         <section class="order-form" id="order">
             <h2>Pesan Sekarang</h2>
