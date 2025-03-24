@@ -36,7 +36,7 @@
         nav a:hover {
             color: #ffd9b3;
         }
-        .menu, .gallery {
+        .menu, .gallery, .order-form {
             margin: 20px auto;
             padding: 20px;
             background-color: white;
@@ -46,10 +46,10 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
-        .menu:hover, .gallery:hover {
+        .menu:hover, .gallery:hover, .order-form:hover {
             transform: scale(1.05);
         }
-        .menu h2, .gallery h2 {
+        .menu h2, .gallery h2, .order-form h2 {
             color: #ff6600;
         }
         .menu ul {
@@ -73,7 +73,7 @@
             border-radius: 10px;
             margin-top: 10px;
         }
-        .order-button {
+        .order-button, .submit-button {
             display: inline-block;
             margin: 20px auto;
             padding: 15px 30px;
@@ -84,8 +84,10 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
         }
-        .order-button:hover {
+        .order-button:hover, .submit-button:hover {
             background-color: #1da851;
         }
         footer {
@@ -95,10 +97,10 @@
             color: white;
         }
         @media (max-width: 768px) {
-            .menu, .gallery {
+            .menu, .gallery, .order-form {
                 width: 95%;
             }
-            .order-button {
+            .order-button, .submit-button {
                 width: 90%;
                 padding: 15px;
             }
@@ -146,16 +148,24 @@
         </section>
         <section class="gallery" id="galeri">
             <h2>Galeri Makanan & Minuman</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Seblak.jpg" alt="Seblak">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Bakso.jpg" alt="Bakso Aci">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Kwetiau_Goreng.jpg" alt="Kwetiau Goreng">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Burger.jpg" alt="Burger">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Roti_Goreng.jpg" alt="Roti Goreng">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Roti_Bakar.jpg" alt="Roti Bakar">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Es_Cekek.jpg" alt="Es Cekek">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Kopi.jpg" alt="Kopi">
+            <img src="seblak.jpg" alt="Seblak">
+            <img src="bakso.jpg" alt="Bakso Aci">
+            <img src="kwetiau.jpg" alt="Kwetiau Goreng">
+            <img src="burger.jpg" alt="Burger">
+            <img src="roti_goreng.jpg" alt="Roti Goreng">
+            <img src="roti_bakar.jpg" alt="Roti Bakar">
+            <img src="es_cekek.jpg" alt="Es Cekek">
+            <img src="kopi.jpg" alt="Kopi">
         </section>
-        <a href="https://wa.me/6285777821020?text=Halo%20Warung%20Kenz,%20saya%20ingin%20memesan!" class="order-button" target="_blank" id="order">Pesan via WhatsApp</a>
+        <section class="order-form" id="order">
+            <h2>Pesan Sekarang</h2>
+            <form action="order.php" method="POST">
+                <input type="text" name="nama" placeholder="Nama Anda" required><br><br>
+                <input type="text" name="pesanan" placeholder="Pesanan Anda" required><br><br>
+                <input type="text" name="alamat" placeholder="Alamat" required><br><br>
+                <button type="submit" class="submit-button">Kirim Pesanan</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 WARUNG KENZ. Semua Hak Dilindungi.</p>
