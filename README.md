@@ -109,11 +109,8 @@
         <img src="5fce3837c4f6d.jpg" alt="Gallery Image">
         <img src="6160e9828a4a3.jpeg" alt="Gallery Image">
         <img src="67235eed6bcb1.jpg" alt="Gallery Image">
-        <img src="9d402923b048c65c2f4cbb972534bbad.jpg" alt="Gallery Image">
         <img src="download (1).jpg" alt="Gallery Image">
         <img src="download.jpg" alt="Gallery Image">
-        <img src="crispy-comte-cheeseburgers-FT-RECIPE0921.jpg" alt="Gallery Image">
-        <img src="pngtree-fresh-drink-illustration-in-the-plastic.jpg" alt="Gallery Image">
     </section>
     <section class="order-form" id="order">
         <h2>Pesan Sekarang</h2>
