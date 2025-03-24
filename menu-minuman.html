@@ -88,6 +88,33 @@ $gallery_images = [
             color: white;
             font-size: 16px;
         }
+        #ai-bot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 30px;
+            line-height: 60px;
+        }
+        #chat-box {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background: white;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -115,5 +142,17 @@ $gallery_images = [
     <footer>
         <p>&copy; 2025 WARUNG KENZ. Semua Hak Dilindungi.</p>
     </footer>
+    <div id="ai-bot">🤖</div>
+    <div id="chat-box">Halo! Saya bot AI, siap membantu belanja Anda.</div>
+    <script>
+        document.getElementById("ai-bot").addEventListener("click", function() {
+            let chatBox = document.getElementById("chat-box");
+            if (chatBox.style.display === "none") {
+                chatBox.style.display = "block";
+            } else {
+                chatBox.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
