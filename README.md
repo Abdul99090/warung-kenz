@@ -108,6 +108,10 @@
     <section class="home-gallery">
         <img src="https://i.imgur.com/by9LlZp.jpg" alt="Minuman">
         <img src="https://i.imgur.com/5auiIC0.jpg" alt="Makanan">
+        <img src="https://i.imgur.com/Z2G1XPL.jpg" alt="Cilor dan Maklor">
+         <img src="https://i.imgur.com/T8Q7F3N.jpg" alt="Roti Bakar">
+        <img src="https://i.imgur.com/Y7P6T5L.jpg" alt="Roti Goreng">
+          <img src="https://i.imgur.com/ABC456.jpg" alt="Kwetiau Goreng">
     </section>
     <section class="order-form" id="order">
         <h2>Pesan Sekarang</h2>
