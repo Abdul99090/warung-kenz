@@ -1,3 +1,14 @@
+<?php
+$gallery_images = [
+    '5f61f240a56e8.jpg',
+    '5fce3837c4f6d.jpg',
+    '6160e9828a4a3.jpeg',
+    '67235eed6bcb1.jpg',
+    'download (1).jpg',
+    'download.jpg'
+];
+?>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -5,6 +16,17 @@
     <title>WARUNG KENZ</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4/turn.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#flipbook").turn({
+                width: 600,
+                height: 400,
+                autoCenter: true
+            });
+        });
+    </script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -44,47 +66,20 @@
             color: #ffd9b3;
             transform: scale(1.1);
         }
-        .home-gallery {
+        .flipbook {
+            margin: 50px auto;
+        }
+        .flipbook .page {
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            margin: 20px auto;
-            max-width: 90%;
-        }
-        .home-gallery img {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .order-form {
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            width: 90%;
-            max-width: 600px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        .order-button {
-            display: inline-block;
-            margin: 20px auto;
-            padding: 15px 30px;
-            background-color: #25D366;
-            color: white;
+            align-items: center;
             font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        .order-button:hover {
-            background-color: #1da851;
-            transform: scale(1.1);
+            color: black;
         }
         footer {
             margin-top: 20px;
@@ -93,6 +88,33 @@
             color: white;
             font-size: 16px;
         }
+        #ai-bot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 30px;
+            line-height: 60px;
+        }
+        #chat-box {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background: white;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -100,18 +122,19 @@
         <h1>WARUNG KENZ</h1>
     </header>
     <nav>
-        <a href="menu-makanan.html">Makanan</a>
-        <a href="menu-minuman.html">Minuman</a>
+        <a href="#menu">Menu</a>
         <a href="#order">Pesan</a>
     </nav>
-    <section class="home-gallery">
-        <img src="5f61f240a56e8.jpg" alt="Gallery Image">
-        <img src="5fce3837c4f6d.jpg" alt="Gallery Image">
-        <img src="6160e9828a4a3.jpeg" alt="Gallery Image">
-        <img src="67235eed6bcb1.jpg" alt="Gallery Image">
-        <img src="download (1).jpg" alt="Gallery Image">
-        <img src="download.jpg" alt="Gallery Image">
-    </section>
+    <div id="flipbook" class="flipbook">
+        <div class="page">Menu Makanan</div>
+        <div class="page">Nasi Goreng</div>
+        <div class="page">Ayam Bakar</div>
+        <div class="page">Mie Goreng</div>
+        <div class="page">Menu Minuman</div>
+        <div class="page">Es Teh Manis</div>
+        <div class="page">Jus Alpukat</div>
+        <div class="page">Kopi Susu</div>
+    </div>
     <section class="order-form" id="order">
         <h2>Pesan Sekarang</h2>
         <a href="https://wa.me/6285777821020" class="order-button">Pesan via WhatsApp</a>
@@ -119,5 +142,17 @@
     <footer>
         <p>&copy; 2025 WARUNG KENZ. Semua Hak Dilindungi.</p>
     </footer>
+    <div id="ai-bot">🤖</div>
+    <div id="chat-box">Halo! Saya bot AI, siap membantu belanja Anda.</div>
+    <script>
+        document.getElementById("ai-bot").addEventListener("click", function() {
+            let chatBox = document.getElementById("chat-box");
+            if (chatBox.style.display === "none") {
+                chatBox.style.display = "block";
+            } else {
+                chatBox.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
