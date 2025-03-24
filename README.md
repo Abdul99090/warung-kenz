@@ -146,17 +146,14 @@
         </section>
         <section class="gallery" id="galeri">
             <h2>Galeri Makanan & Minuman</h2>
-            <img src="https://example.com/seblak.jpg" alt="Seblak">
-            <img src="https://example.com/bakso-aci.jpg" alt="Bakso Aci">
-            <img src="https://example.com/kwetiau-goreng.jpg" alt="Kwetiau Goreng">
-            <img src="https://example.com/burger.jpg" alt="Burger">
-            <img src="https://example.com/roti-goreng.jpg" alt="Roti Goreng">
-            <img src="https://example.com/roti-bakar.jpg" alt="Roti Bakar">
-            <img src="https://example.com/cilor-maklor.jpg" alt="Cilor dan Maklor">
-            <img src="https://example.com/papeda.jpg" alt="Papeda">
-            <img src="https://example.com/indomie.jpg" alt="Indomie Goreng dan Kuah">
-            <img src="https://example.com/es-cekek.jpg" alt="Es Cekek">
-            <img src="https://example.com/kopi.jpg" alt="Kopi Es/Panas">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Seblak.jpg" alt="Seblak">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Bakso.jpg" alt="Bakso Aci">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Kwetiau_Goreng.jpg" alt="Kwetiau Goreng">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Burger.jpg" alt="Burger">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Roti_Goreng.jpg" alt="Roti Goreng">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Roti_Bakar.jpg" alt="Roti Bakar">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Es_Cekek.jpg" alt="Es Cekek">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Kopi.jpg" alt="Kopi">
         </section>
         <a href="https://wa.me/6285777821020?text=Halo%20Warung%20Kenz,%20saya%20ingin%20memesan!" class="order-button" target="_blank" id="order">Pesan via WhatsApp</a>
     </main>
