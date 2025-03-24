@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -106,12 +105,15 @@
         <a href="#order">Pesan</a>
     </nav>
     <section class="home-gallery">
-        <img src="https://i.imgur.com/by9LlZp.jpg" alt="Minuman">
-        <img src="https://i.imgur.com/5auiIC0.jpg" alt="Makanan">
-        <img src="https://i.imgur.com/Z2G1XPL.jpg" alt="Cilor dan Maklor">
-         <img src="https://i.imgur.com/T8Q7F3N.jpg" alt="Roti Bakar">
-        <img src="https://i.imgur.com/Y7P6T5L.jpg" alt="Roti Goreng">
-          <img src="https://i.imgur.com/ABC456.jpg" alt="Kwetiau Goreng">
+        <img src="5f61f240a56e8.jpg" alt="Gallery Image">
+        <img src="5fce3837c4f6d.jpg" alt="Gallery Image">
+        <img src="6160e9828a4a3.jpeg" alt="Gallery Image">
+        <img src="67235eed6bcb1.jpg" alt="Gallery Image">
+        <img src="9d402923b048c65c2f4cbb972534bbad.jpg" alt="Gallery Image">
+        <img src="download (1).jpg" alt="Gallery Image">
+        <img src="download.jpg" alt="Gallery Image">
+        <img src="crispy-comte-cheeseburgers-FT-RECIPE0921.jpg" alt="Gallery Image">
+        <img src="pngtree-fresh-drink-illustration-in-the-plastic.jpg" alt="Gallery Image">
     </section>
     <section class="order-form" id="order">
         <h2>Pesan Sekarang</h2>
