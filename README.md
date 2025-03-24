@@ -34,6 +34,21 @@ $gallery_images = [
                 alert("Fitur ini akan segera tersedia!");
             });
         });
+
+        function updateWebsiteAutomatically() {
+            $.ajax({
+                url: 'update.php',
+                type: 'GET',
+                success: function(response) {
+                    console.log("Website updated: " + response);
+                },
+                error: function() {
+                    console.log("Error updating website");
+                }
+            });
+        }
+
+        setInterval(updateWebsiteAutomatically, 60000); // Cek update setiap 60 detik
     </script>
     <style>
         body {
@@ -90,21 +105,6 @@ $gallery_images = [
         .gallery img:hover {
             transform: scale(1.1);
         }
-        .flipbook {
-            margin: 50px auto;
-        }
-        .flipbook .page {
-            width: 300px;
-            height: 400px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            color: black;
-        }
         footer {
             margin-top: 20px;
             padding: 15px;
@@ -143,9 +143,6 @@ $gallery_images = [
             padding: 10px;
             color: black;
         }
-        .smooth-scroll {
-            scroll-behavior: smooth;
-        }
     </style>
 </head>
 <body>
@@ -161,10 +158,6 @@ $gallery_images = [
         <?php foreach ($gallery_images as $image) { ?>
             <img src="images/<?php echo $image; ?>" alt="Gallery Image">
         <?php } ?>
-    </div>
-    <div id="flipbook" class="flipbook">
-        <div class="page">Menu Makanan & Minuman</div>
-        <div class="page">Silakan pilih kategori!</div>
     </div>
     <div id="ai-bot">🤖</div>
     <div id="chat-box">Halo! Saya AI bot, siap membantu belanja Anda! Pilih kategori: <br> <button>Menu Makanan</button> <button>Menu Minuman</button></div>
